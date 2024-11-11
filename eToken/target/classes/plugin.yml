@@ -1,0 +1,68 @@
+name: EToken
+main: dev.ender.etoken.EToken
+version: 1.0
+api-version: 1.8
+author: Ender
+depend: [PlaceholderAPI]
+
+commands:
+  et:
+    description: Gestisce i comandi relativi ai gettoni.
+    usage: /et <give|assegno|riscattare|converti|gettoni>
+    permission: etoken.et
+    permission-message: "§d§lBaller§7§lMC §8» §cNon hai il permesso di usare questo comando."
+
+  etremove:
+    description: Rimuove gettoni a un giocatore specificato.
+    usage: /et remove <giocatore> <quantità>
+    permission: etoken.remove
+    permission-message: "§d§lBaller§7§lMC §8» §cNon hai il permesso di usare questo comando."
+
+  assegno:
+    description: Crea un assegno con un importo specificato.
+    usage: /et assegno <importo>
+    permission: etoken.assegno
+    permission-message: "§d§lBaller§7§lMC §8» §cNon hai il permesso di usare questo comando."
+
+  riscattare:
+    description: Riscatta un assegno.
+    usage: /et riscattare <importo>
+    permission: etoken.riscattare
+    permission-message: "§d§lBaller§7§lMC §8» §cNon hai il permesso di usare questo comando."
+
+  converti:
+    description: Converte un assegno in gettoni.
+    usage: /et converti <importo>
+    permission: etoken.converti
+    permission-message: "§d§lBaller§7§lMC §8» §cNon hai il permesso di usare questo comando."
+
+  gettoni:
+    description: Mostra il numero di gettoni posseduti dal giocatore.
+    usage: /et gettoni
+    permission: etoken.gettoni
+    permission-message: "§d§lBaller§7§lMC §8» §cNon hai il permesso di usare questo comando."
+
+permissions:
+  etoken.assegno:
+    description: Permette di creare un assegno.
+    default: true
+
+  etoken.riscattare:
+    description: Permette di riscattare un assegno.
+    default: true
+
+  etoken.converti:
+    description: Permette di convertire un assegno in gettoni.
+    default: true
+
+  etoken.gettoni:
+    description: Permette di vedere il saldo di gettoni.
+    default: true
+
+  etoken.et:
+    description: Permette di gestire i comandi relativi ai gettoni.
+    default: op
+
+  etoken.remove:
+    description: Permette di rimuovere gettoni da un giocatore.
+    default: op
